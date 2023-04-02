@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Himanshu">
+    <meta name="description" content="Free Website to store your ToDo Works.">
+    <meta name="keywords" content="JavaScript, TailWind CSS, HTML">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ToDo List</title>
+</head>
+
+<body id="base" class="bg-white text-gray">
+    <nav class=" px-2 py-1 pt-2 pb-2 flex flex-row space-x-4">
+        <p id="todo" class="flex-auto text-md text-sky-700 font-bold">todo list</p>
+        <Button id="themeBtn" class="cursor-pointer rounded-full px-5 text-sm bg-sky-700 text-white" type="button"
+            onclick="theme()">Dark</Button>
+    </nav>
+    <hr class="border-gray-800">
+    <div id="Note"
+        class="flex flex-col justify-center item-center mx-8 my-4 py-4  shadow-lg shadow-gray-500/40 bg-slate-50">
+        <h1 id="addNotes" class="text-center text-xl text-sky-700">Add Note</h1>
+        <input id="subject" class="mx-auto my-1 py-2 w-4/5 px-2 bg-transparent border border-gray-400 rounded"
+            type="text" placeholder="Write the subject here." keyup="activate()">
+        <textarea class="mx-auto my-1 py-2 px-2 w-4/5 bg-transparent border border-gray-400 rounded" name="content"
+            id="content" cols="30" rows="4" placeholder="Write the Activity here." keyup="activate()"></textarea>
+        <Button id="add" class="cursor-pointer px-8 py-2 mt-2 mx-auto text-sm bg-sky-700 text-white w-4/5" type="button"
+            onclick="addNote()">Add</Button>
+    </div>
+
+    <div id="NoteBook" >
+        
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
