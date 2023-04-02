@@ -135,6 +135,10 @@ function showContent(){
             eventProviding();
         }
     }
+    else{
+        let target = document.getElementById("NoteBook") ;
+        target.innerHTML = "" ;
+    }
 }
 
 function eventProviding(){
@@ -151,7 +155,11 @@ let removeNoteNumber = e =>{
     console.log(obj[elementToRemove]) ;
     delete obj[elementToRemove] ;
     json = JSON.stringify(obj) ;
+    let len = Object.keys(obj).length ;
     localStorage.setItem("myNotes", json) ;
+    if(len === 0){
+        localStorage.clear();
+    }
     showContent() ;
 }
 
